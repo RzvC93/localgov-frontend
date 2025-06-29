@@ -1,0 +1,42 @@
+{
+  "recommendations": [
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode",
+    "EditorConfig.EditorConfig",
+    "sonarsource.sonarlint-vscode",
+
+    "dsznajder.es7-react-js-snippets",
+    "bradlc.vscode-tailwindcss",
+    "styled-components.vscode-styled-components",
+    "christian-kohler.path-intellisense",
+
+    "redhat.java",
+    "vmware.vscode-spring-boot",
+    "vscjava.vscode-java-debug",
+
+    "ms-azuretools.vscode-docker",
+    "ms-kubernetes-tools.vscode-kubernetes-tools",
+    "redhat.vscode-yaml",
+
+    "hbenl.vscode-test-explorer",
+    "ryanluker.vscode-coverage-gutters",
+    "github.vscode-github-actions",
+
+    "mtxr.sqltools",
+    "cweijan.vscode-database-client2",
+
+    "eamodio.gitlens",
+    "mhutchie.git-graph",
+    "github.vscode-pull-request-github",
+
+    "DavidAnson.vscode-markdownlint",
+    "yzhang.markdown-all-in-one",
+    "humao.rest-client",
+
+    "github.codeql",
+
+    "wix.vscode-import-cost",
+    "mikestead.dotenv",
+    "streetsidesoftware.code-spell-checker"
+  ]
+}
