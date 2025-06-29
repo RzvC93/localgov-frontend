@@ -1,4 +1,4 @@
-# Logs
+# === LOGS ===
 logs
 *.log
 npm-debug.log*
@@ -7,18 +7,52 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# === DEPENDENȚE ===
+node_modules/
 
-# Editor directories and files
+# === BUILD OUTPUT ===
+dist/
+dist-ssr/
+build/
+out/
+
+# === ENVIRONMENT ===
+.env
+.env.*.local
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# === SISTEM OPERARE ===
+.DS_Store
+Thumbs.db
+
+# === EDITORI ===
 .vscode/*
 !.vscode/extensions.json
-.idea
-.DS_Store
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# === COVERAGE / TESTE ===
+coverage/
+.nyc_output/
+*.lcov
+
+# === TYPECHECK / TS ===
+*.tsbuildinfo
+
+# === MISC ===
+*.local
+*.log
+*.pid
+*.seed
+*.tgz
+*.patch
+
+# === GIT ===
+.git/
