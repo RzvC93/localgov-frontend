@@ -1,5 +1,4 @@
 // src/components/system/Skeleton.tsx
-import React from 'react';
 
 const Skeleton = () => (
   <div className="w-full animate-pulse space-y-3">

@@ -2,7 +2,7 @@
 FROM node:20-alpine AS builder
 WORKDIR /app
 COPY . .
-RUN npm install
+RUN npm install --legacy-peer-deps
 RUN npm run build
 
 # Production stage
