@@ -45,3 +45,13 @@ jobs:
 
       - name: Docker push to GHCR
         run: docker push ghcr.io/rzvc93/localgov-frontend:latest
+
+      - name: Security scan cu Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ghcr.io/rzvc93/localgov-frontend:latest
+          format: table
+          exit-code: 0
+          ignore-unfixed: true
+          vuln-type: os,library
+          severity: CRITICAL,HIGH
