@@ -39,8 +39,9 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Docker push to GHCR
+      - name: Docker push to GHCR (force create personal package)
         run: |
           docker tag localgov-frontend ghcr.io/rzvc93/temp-localgov-frontend:latest
           docker push ghcr.io/rzvc93/temp-localgov-frontend:latest
+
 
