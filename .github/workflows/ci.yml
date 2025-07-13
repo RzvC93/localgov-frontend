@@ -43,3 +43,4 @@ jobs:
         run: |
           docker tag localgov-frontend ghcr.io/rzvc93/temp-localgov-frontend:latest
           docker push ghcr.io/rzvc93/temp-localgov-frontend:latest
+
