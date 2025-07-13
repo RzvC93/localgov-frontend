@@ -1,4 +1,4 @@
-name: Frontend CI
+name: Frontend CI + Docker CD (GHCR)
 
 on:
   push:
@@ -41,6 +41,5 @@ jobs:
 
       - name: Docker push to GHCR
         run: |
-          docker tag localgov-frontend ghcr.io/${{ github.repository_owner }}/localgov-frontend:latest
-          docker push ghcr.io/${{ github.repository_owner }}/localgov-frontend:latest
-
+          docker tag localgov-frontend ghcr.io/rzvc93/localgov-frontend:latest
+          docker push ghcr.io/rzvc93/localgov-frontend:latest
