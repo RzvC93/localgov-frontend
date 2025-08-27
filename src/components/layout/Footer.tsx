@@ -1,5 +1,4 @@
-// src/components/layout/Footer.tsx
-import React from 'react';
+// fără: import React from 'react';
 import ConsentManager from '@/components/legal/ConsentManager';
 
 export default function Footer() {

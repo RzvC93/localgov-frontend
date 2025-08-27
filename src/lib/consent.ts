@@ -1,13 +1,11 @@
 // src/lib/consent.ts
-import { CookieCategory } from '@/constants/cookieCategories';
+import type { CookieCategory } from '@/constants/cookieCategories';
 import axios from 'axios';
 
 const LOCAL_STORAGE_KEY = 'cookieConsent';
 export const OPEN_CONSENT_EVENT = 'open-consent';
 
-export interface ConsentPreferences {
-  [key in CookieCategory]?: boolean;
-}
+export type ConsentPreferences = Partial<Record<CookieCategory, boolean>>;
 
 export function saveConsent(preferences: ConsentPreferences) {
   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(preferences));
@@ -15,7 +13,7 @@ export function saveConsent(preferences: ConsentPreferences) {
 
 export function getConsent(): ConsentPreferences | null {
   const raw = localStorage.getItem(LOCAL_STORAGE_KEY);
-  return raw ? JSON.parse(raw) : null;
+  return raw ? (JSON.parse(raw) as ConsentPreferences) : null;
 }
 
 export function hasConsent(): boolean {
@@ -23,14 +21,10 @@ export function hasConsent(): boolean {
 }
 
 export async function sendConsentToApi(preferences: ConsentPreferences) {
-  try {
-    await axios.post('/api/legal/consent', {
-      preferences,
-      userId: null,
-    });
-  } catch (error) {
-    console.error('Eroare la trimiterea consimțământului:', error);
-  }
+  await axios.post('/api/legal/consent', {
+    preferences,
+    userId: null,
+  });
 }
 
 export function resetConsentLocal() {
