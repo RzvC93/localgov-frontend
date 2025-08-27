@@ -1,41 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-
-
-import path from 'path';
+import { fileURLToPath, URL } from 'node:url';
 
 export default defineConfig({
-  plugins: [
-    react(),
-    VitePWA({
-      registerType: 'autoUpdate',
-      includeAssets: ['favicon.svg', 'robots.txt'],
-      manifest: {
-        name: 'LocalGovApp',
-        short_name: 'GovApp',
-        start_url: '/',
-        display: 'standalone',
-        background_color: '#ffffff',
-        theme_color: '#2D9CDB',
-        icons: [
-          {
-            src: '/icons/icon-192.png',
-            sizes: '192x192',
-            type: 'image/png',
-          },
-          {
-            src: '/icons/icon-512.png',
-            sizes: '512x512',
-            type: 'image/png',
-          },
-        ],
-      },
-    }),
-  ],
+  plugins: [react()], // ⬅️ fără VitePWA
   resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src'),
-      '@layout': path.resolve(__dirname, './src/layout'),
-    },
+    alias: { '@': fileURLToPath(new URL('./src', import.meta.url)) },
+  },
+  test: {
+    globals: true,
+    environment: 'jsdom',
+    // setupFiles: './tests/setup.ts', // dacă vei avea
   },
 });
