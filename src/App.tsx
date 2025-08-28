@@ -1,15 +1,12 @@
-// fără: import React from 'react';
+import { RouterProvider } from 'react-router-dom';
+import router from '@/router';
 import CookieBanner from '@/components/legal/CookieBanner';
-import Footer from '@/components/layout/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <main className="flex-1 p-4">
-        <h1 className="text-2xl font-semibold">LocalGovApp</h1>
-      </main>
-      <Footer />
+    <>
+      <RouterProvider router={router} />
       <CookieBanner />
-    </div>
+    </>
   );
 }
