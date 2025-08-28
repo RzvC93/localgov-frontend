@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider } from 'react-router-dom';
-import router from '@/layout/router';
+import router from '@/router'; // ← import corect
 import '@/index.css';
 import ErrorBoundary from '@/components/system/ErrorBoundary';
 
