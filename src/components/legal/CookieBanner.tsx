@@ -24,6 +24,7 @@ export default function CookieBanner() {
 
   useEffect(() => {
     const existing = getConsent();
+    console.log('🔍 Consent în localStorage:', existing);
     if (!existing) {
       initDefaultPrefs();
       setVisible(true);
