@@ -1,3 +1,9 @@
+export default function CookieBanner() {
+  console.log('👀 CookieBanner montat');
+
+  const [visible, setVisible] = useState(false);
+
+
 // src/components/legal/CookieBanner.tsx
 import { useEffect, useState } from 'react';
 import { COOKIE_CATEGORIES } from '@/constants/cookieCategories';
