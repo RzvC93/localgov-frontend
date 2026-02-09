@@ -1,0 +1,33 @@
+# Ignore dependencies and build output (keeps Docker context small and builds fast)
+node_modules
+dist
+build
+
+# Logs and temp files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+.tmp
+.temp
+.cache
+
+# Vite / tooling caches
+.vite
+.eslintcache
+
+# Env files should not be baked into images
+.env
+.env.*
+!.env.example
+
+# IDE / OS noise
+.vscode
+.idea
+.DS_Store
+Thumbs.db
+
+# Git metadata not needed for build
+.git
+.gitignore
